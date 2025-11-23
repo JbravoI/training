@@ -19,4 +19,4 @@
               objectType: cert
             - key: tls.key
               objectName: <your-certificate-name>
-              objectType: cert777777
+              objectType: cert22222
