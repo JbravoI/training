@@ -15,8 +15,8 @@
           type: kubernetes.io/tls
           data:
             - key: tls.crt
-              objectName: <your-certificate-name> # Name of the certificate in Key Vault
-              objectType: cert
+              objectName: Joseph's Vault # Name of the certificate in Key Vault
+              objectType: my-certificate-secret
             - key: tls.key
-              objectName: <your-certificate-name>
+              objectName: AzureConflicts
               objectType: certanother
