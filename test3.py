@@ -1,7 +1,7 @@
 # simple_greeting.py
 
 def main():
-    print("Hello! Welcome to this simple Python program.")
+    print("Hello! Welcome to this simple Python class.")
     name = input("What's your name? ")
     print(f"Nice to meet you, {name}!")
 

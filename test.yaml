@@ -6,9 +6,9 @@ debug: true
 
 database:
   host: localhost
-  port: 5432
+  port: 1234
   username: admin
-  password: secret
+  password: secret777
 
 features:
   enable_logging: true
