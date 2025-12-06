@@ -1,1 +1,1 @@
-adding py file
+print ("This is a python file for my second Devs assessment")
