@@ -1,22 +1,15 @@
-    apiVersion: secrets-store.csi.k8s.io/v1
-    kind: SecretProviderClass
-    metadata:
-      name: akv-certificate-secretowner
-    spec:
-      provider: azure
-      parameters:
-        usePodIdentity: "false" # Set to "true" if using Workload Identity
-        useVMManagedIdentity: "true" # Set to "true" if using VM-assigned managed identity
-        userAssignedIdentityID: "<client-id-of-managed-identity>" # Required if useVMManagedIdentity is "true"
-        keyvaultName: "<your-keyvault-name>"
-        tenantId: "<your-azure-tenant-id>"
-      secretObjects:
-        - secretName: my-certificate-secret # Name of the Kubernetes Secret to be created
-          type: kubernetes.io/tls
-          data:
-            - key: tls.crt
-              objectName: <your-certificate-name> # Name of the certificate in Key Vault
-              objectType: cert
-            - key: tls.key
-              objectName: <your-certificate-name>
-              objectType: certanother
+# config.yaml
+
+app_name: MyApp
+version: 1.0.0
+debug: true
+
+database:
+  host: localhost
+  port: 1234
+  username: admin
+  password: secret777
+
+features:
+  enable_logging: true
+  enable_notifications: false
