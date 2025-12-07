@@ -17,8 +17,8 @@ jobs:
 
       - name: list the Secret
         run: |
-          echo "Secret name : " ${{ secrets.Girl }}
+          echo "Secret name : " ${{ env.sample.secrets.Girl }}
 
       - name: list the variable
         run: |
-          echo "Variable name : " ${{ var.boy }}
+          echo "Variable name : " ${{ env.sample.boy }}
