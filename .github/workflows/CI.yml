@@ -30,4 +30,4 @@ jobs:
 
       - name: list the variable
         run: |
-          echo "Variable name : " ${{ resource_name }}
+          echo "Variable name : " ${{ env.resource_name }}
