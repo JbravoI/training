@@ -1,0 +1,25 @@
+name: Continous Integration
+
+on:
+  workflow_dispatch: # manual trigger, can also add push or schedule
+  push:
+    branches:
+      - main
+
+env:
+  Gender: Boy
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+
+    steps:
+      #Checkout your repo
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Azure Login with Service Principal
+      - name: list the variable
+        run: |
+          echo "Variable name : " 
+
