@@ -8,6 +8,8 @@ on:
 
 env:
   sub_name: test_sub
+  tenant_name: test_tenant
+  resource_name: virtual_machine
   
 jobs:
   Build:
@@ -18,10 +20,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: list the Secret
+      - name: list the variable
         run: |
-          echo "Secret name : " ${{ secrets.username }}
+          echo "Sub_name : " ${{ env.sub_name }}
 
       - name: list the variable
         run: |
-          echo "Variable name : " ${{ env.sub_name }}
+          echo "Variable name : " $tenant_name
+
+      - name: list the variable
+        run: |
+          echo "Variable name : " ${{ resource_name }}
