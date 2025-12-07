@@ -2,9 +2,9 @@ name: Deploy Bicep Template at Tenant Scope
 
 on:
   workflow_dispatch: # manual trigger, can also add push or schedule
-  push:
-    branches:
-      - main
+  # push:
+  #   branches:
+  #     - main
 
 env:
   TEMPLATE_FILE: ./XXXXX
