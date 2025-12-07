@@ -21,4 +21,4 @@ jobs:
 
       - name: list the variable
         run: |
-          echo "Variable name : " ${{ variable.boy }}
+          echo "Variable name : " ${{ var.boy }}
