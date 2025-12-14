@@ -31,8 +31,13 @@ jobs:
 
       - name: Read the contents of my files
         run: |
+          echo "Contents of File 1"
           cat $file          
+          
+          echo "Contents of File 2"
           cat $file2        
+          
+          echo "Contents of File 3"
           cat $file3
 
       - name: Create ZIP file
