@@ -10,6 +10,9 @@ env:
   sub_name: test_sub
   tenant_name: test_tenant
   resource_name: virtual_machine
+  file: ./test.yaml
+  file2: ./test2.json
+  file3: ./test3.py
   
 jobs:
   Build:
@@ -20,14 +23,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: list the variable
+      - name: list the variables
         run: |
           echo "Sub_name : " ${{ env.sub_name }}
-
-      - name: list the variable
-        run: |
           echo "Variable name : " $tenant_name
-
-      - name: list the variable
-        run: |
           echo "Variable name : " ${{ env.resource_name }}
+
+      - name: Read the contents of my files
+        run: |
+          cat $file          
+          cat $file2        
+          cat $file3
+
+      - name: Create ZIP file
+        run: |
+          zip -r build-${{ github.run_number }}.zip dist/
+
+      - name: Upload ZIP as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: zipped-build
+          path: build-${{ github.run_number }}.zip
