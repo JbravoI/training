@@ -18,7 +18,10 @@ jobs:
 
       #Move into the Dotnet Folder
       - name: Move into the Dotnet Folder
-        run: cd dotnet-sample-deployment\dotnetSampleApi
+        run: 
+            ls
+            cd dotnet-sample-deployment
+            cd dotnetSampleApi
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
