@@ -2,9 +2,9 @@ name: Continous Integration
 
 on:
   workflow_dispatch: # manual trigger, can also add push or schedule
-  push:
-    branches:
-      - main
+  # push:
+  #   branches:
+  #     - main
 
 env:
   sub_name: test_sub
