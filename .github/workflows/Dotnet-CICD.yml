@@ -15,10 +15,10 @@ jobs:
       #Checkout your repo
       - name: Checkout
         uses: actions/checkout@v4
-        
+
       #Move into the Dotnet Folder
       - name: Move into the Dotnet Folder
-        run: cd dotnet-sample-deployment
+        run: cd dotnet-sample-deployment\dotnetSampleApi
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
